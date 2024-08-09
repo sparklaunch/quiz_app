@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MainView extends StatelessWidget {
-  const MainView({super.key});
+  final void Function() startQuiz;
+  const MainView(this.startQuiz, {super.key});
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -25,7 +26,7 @@ class MainView extends StatelessWidget {
           ),
           const SizedBox(height: 30),
           OutlinedButton.icon(
-            onPressed: () {},
+            onPressed: startQuiz,
             style: OutlinedButton.styleFrom(
                 foregroundColor: Colors.white,
                 textStyle: const TextStyle(
