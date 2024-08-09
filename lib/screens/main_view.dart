@@ -11,6 +11,7 @@ class MainView extends StatelessWidget {
           Image.asset(
             "assets/images/quiz_logo.png",
             width: 300,
+            color: const Color.fromARGB(150, 255, 255, 255),
           ),
           const SizedBox(
             height: 50.0,
@@ -23,14 +24,15 @@ class MainView extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 30),
-          OutlinedButton(
+          OutlinedButton.icon(
             onPressed: () {},
             style: OutlinedButton.styleFrom(
                 foregroundColor: Colors.white,
                 textStyle: const TextStyle(
                   fontWeight: FontWeight.bold,
                 )),
-            child: const Text("Start Quiz"),
+            icon: const Icon(Icons.arrow_right_alt),
+            label: const Text("Start Quiz"),
           )
         ],
       ),
